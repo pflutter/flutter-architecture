@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_architecture/app/domain/http_response.dart';
 import 'package:flutter_architecture/app/domain/repositories/auth.repository.dart';
 import 'package:flutter_architecture/core/di/injector_provider.dart';
@@ -23,5 +22,4 @@ class AuthRepository implements IAuthRepository {
 
     return response;
   }
-
 }

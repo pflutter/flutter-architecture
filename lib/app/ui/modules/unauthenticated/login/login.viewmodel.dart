@@ -4,12 +4,12 @@ import 'package:flutter_architecture/core/base/view_model.base.dart';
 import 'package:flutter_architecture/core/di/injector_provider.dart';
 import 'package:rxdart/rxdart.dart';
 
-class LoginViewModel extends BaseViewModel  {
+class LoginViewModel extends BaseViewModel {
   AuthRepository repository = inject<AuthRepository>();
-  
+
   final _login = BehaviorSubject<String>.seeded("");
   final _password = BehaviorSubject<String>.seeded("");
-  
+
   Stream get login => _login.stream;
   void setLogin(String value) => _login.add(value);
 
@@ -24,7 +24,7 @@ class LoginViewModel extends BaseViewModel  {
     HttpResponse ret = await repository.login(_login.value, _password.value);
 
     setLoading(false);
-    
+
     if (ret.statusCode == 200) {
       clear();
       return true;
