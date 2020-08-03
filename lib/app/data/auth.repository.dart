@@ -1,7 +1,7 @@
-import 'package:flutter_architecture/app/domain/http_response.dart';
-import 'package:flutter_architecture/app/domain/repositories/auth.repository.dart';
-import 'package:flutter_architecture/core/di/injector_provider.dart';
-import 'package:flutter_architecture/device/connection/connection.helper.dart';
+import 'package:cpap_mobile/app/domain/http_response.dart';
+import 'package:cpap_mobile/app/domain/repositories/auth.repository.dart';
+import 'package:cpap_mobile/core/di/injector_provider.dart';
+import 'package:cpap_mobile/device/connection/connection.helper.dart';
 
 import 'sources/remote/auth.service.dart';
 

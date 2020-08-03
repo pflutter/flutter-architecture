@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_architecture/app/data/sources/cache/storage.helper.dart';
+import 'package:cpap_mobile/app/data/sources/cache/storage.helper.dart';
 
 class HttpClient {
   Dio _client;
@@ -10,21 +10,22 @@ class HttpClient {
   }
 
   Interceptor _interceptor() {
-    return InterceptorsWrapper(
-      onRequest: (RequestOptions request) async {
-        final storageToken = await StorageHelper.get(StorageKeys.token);
+    return InterceptorsWrapper(onRequest: (RequestOptions request) async {
+      final storageToken = await StorageHelper.get(StorageKeys.token);
 
-        if (storageToken != null) request.headers.addAll({
+      if (storageToken != null)
+        request.headers.addAll({
           "Authorization": 'Bearer $storageToken',
         });
 
-        return request;
-      }
-    );
+      return request;
+    });
   }
 
   Future<Response> get(String url) => _client.get(url);
-  Future<Response> post(String url, { dynamic body }) => _client.post(url, data: body);
-  Future<Response> put(String url, { dynamic body }) => _client.put(url, data: body);
-  Future<Response> delete(String url, { dynamic body }) => _client.delete(url);
+  Future<Response> post(String url, {dynamic body}) =>
+      _client.post(url, data: body);
+  Future<Response> put(String url, {dynamic body}) =>
+      _client.put(url, data: body);
+  Future<Response> delete(String url, {dynamic body}) => _client.delete(url);
 }

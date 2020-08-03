@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_architecture/app/ui/widgets/text.dart';
-import 'package:flutter_architecture/core/values/colors.dart' as colors;
+import 'package:cpap_mobile/app/ui/widgets/text.dart';
+import 'package:cpap_mobile/core/values/colors.dart' as colors;
 
 class TagWidget extends StatefulWidget {
   final String label;
@@ -9,7 +9,14 @@ class TagWidget extends StatefulWidget {
   final bool canCheck;
   final bool initialStatus;
 
-  const TagWidget({Key key, this.initialStatus, this.canCheck, this.label, this.onPress, this.arrow}) : super(key: key);
+  const TagWidget(
+      {Key key,
+      this.initialStatus,
+      this.canCheck,
+      this.label,
+      this.onPress,
+      this.arrow})
+      : super(key: key);
 
   @override
   _TagWidgetState createState() => _TagWidgetState();
@@ -37,25 +44,20 @@ class _TagWidgetState extends State<TagWidget> {
 
         if (widget.onPress != null) widget.onPress(newIsActive);
 
-        if (widget.canCheck == true) setState(() {
-          _isActive = newIsActive;
-        });
+        if (widget.canCheck == true)
+          setState(() {
+            _isActive = newIsActive;
+          });
       },
       child: Container(
-        padding: EdgeInsets.only(
-            top: 6,
-            bottom: 6,
-            left: 22,
-            right: rightPadding
-        ),
+        padding:
+            EdgeInsets.only(top: 6, bottom: 6, left: 22, right: rightPadding),
         margin: EdgeInsets.only(left: 12),
         decoration: BoxDecoration(
-          color: _isActive == true ? colors.accentColor : colors.backgroundColor,
+          color:
+              _isActive == true ? colors.accentColor : colors.backgroundColor,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-              color: colors.accentColor,
-              width: 1
-          ),
+          border: Border.all(color: colors.accentColor, width: 1),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -63,10 +65,12 @@ class _TagWidgetState extends State<TagWidget> {
             TextWidget(
                 text: widget.label,
                 small: true,
-                color: _isActive == true ? colors.backgroundColor : colors.accentColor
-            ),
+                color: _isActive == true
+                    ? colors.backgroundColor
+                    : colors.accentColor),
             if (widget.arrow == true) SizedBox(width: 8),
-            if (widget.arrow == true) Icon(Icons.arrow_drop_down, color: colors.accentColor)
+            if (widget.arrow == true)
+              Icon(Icons.arrow_drop_down, color: colors.accentColor)
           ],
         ),
       ),

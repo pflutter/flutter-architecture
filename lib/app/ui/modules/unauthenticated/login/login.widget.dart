@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_architecture/app/ui/modules/authenticated/home/home.page.dart';
-import 'package:flutter_architecture/app/ui/widgets/button.dart';
-import 'package:flutter_architecture/app/ui/widgets/input.dart';
-import 'package:flutter_architecture/app/ui/widgets/logo.dart';
-import 'package:flutter_architecture/app/ui/widgets/snackbar.dart';
-import 'package:flutter_architecture/app/ui/widgets/text.dart';
-import 'package:flutter_architecture/core/di/injector_provider.dart';
-import 'package:flutter_architecture/core/values/dimens.dart' as dimens;
-import 'package:flutter_architecture/device/nav/nav_slide_from_top.dart';
+import 'package:cpap_mobile/app/ui/modules/authenticated/home/home.page.dart';
+import 'package:cpap_mobile/app/ui/widgets/button.dart';
+import 'package:cpap_mobile/app/ui/widgets/input.dart';
+import 'package:cpap_mobile/app/ui/widgets/logo.dart';
+import 'package:cpap_mobile/app/ui/widgets/snackbar.dart';
+import 'package:cpap_mobile/app/ui/widgets/text.dart';
+import 'package:cpap_mobile/core/di/injector_provider.dart';
+import 'package:cpap_mobile/core/values/dimens.dart' as dimens;
+import 'package:cpap_mobile/device/nav/nav_slide_from_top.dart';
 
 import 'login.viewmodel.dart';
 

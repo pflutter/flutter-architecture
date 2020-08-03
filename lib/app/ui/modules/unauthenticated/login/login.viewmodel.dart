@@ -1,7 +1,7 @@
-import 'package:flutter_architecture/app/data/auth.repository.dart';
-import 'package:flutter_architecture/app/domain/http_response.dart';
-import 'package:flutter_architecture/core/base/view_model.base.dart';
-import 'package:flutter_architecture/core/di/injector_provider.dart';
+import 'package:cpap_mobile/app/data/auth.repository.dart';
+import 'package:cpap_mobile/app/domain/http_response.dart';
+import 'package:cpap_mobile/core/base/view_model.base.dart';
+import 'package:cpap_mobile/core/di/injector_provider.dart';
 import 'package:rxdart/rxdart.dart';
 
 class LoginViewModel extends BaseViewModel {
