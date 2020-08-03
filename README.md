@@ -1,31 +1,17 @@
-# Flutter Architecture
+# cpap_mobile
+PURPOSE
+Main purpose is for doctor to be able to receive push notification when patient status changed
 
-This project structure was made thinking in productivity and easy maintenance.
+DESCRIBE
+Login page : allow login/recovery password. Do not have option to register
 
-#### What it brings ?
+Home page (after login) + Show table of patient
 
-1. Clean Architecture and MVVM
+When click to patient, will show details of patient history
 
-2. Get_It for dependency injection
+When patient status change, receive push notification and show it on top
 
-3. For state management, you have two options:
-```
-BRANCH master -> RxDart
-BRANCH mobx -> Mobx
-```
-4. SQFlite to work with SQLite
+ADD-IN
+DnD
 
-5. HTTP requests using Dio
-
-6. Helper for store data on device using Shared Preferences with a helper class
-
-7. Helper for check connection status
-
-8. Custom classes for page transitions animated (fromLeft, from Top, fromBottom and fromRight)
-
-9. Custom Widgets like LoadingWidget, CardViewWidget, Toast, Snackbar, ModalWidget, Dropdown, CustomDrawer and more
-
-10. The "values" folder, you will find the files:
-- "dimens": to set sizes defaults for margin, font, etc
-- "colors" set the color pallet
-- "theme": set the app's theme 
+Allow user to enable/disable push notitfication
